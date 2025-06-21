@@ -13,11 +13,6 @@ Visus is a modern Flask web application that allows users to upload a video, ext
 
 ---
 
-## 🖼️ Demo
-![Demo Screenshot](static/demo_screenshot.png)
-
----
-
 ## 🛠️ Requirements
 - Python 3.8+
 - See `requirement.txt` for all Python dependencies:
