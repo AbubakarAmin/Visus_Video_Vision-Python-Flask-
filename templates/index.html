@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css' ) }}">
+    <title>Visus - Video to Description</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Visus: Video Understanding</h1>
+        <form method="post" enctype="multipart/form-data" action="{{ url_for('process_video') }}">
+            <input type="file" name="video" id="video" accept="video/*" required>
+            <button type="submit">Analyze Video</button>
+        </form>
+        {% if error %}
+            <div class="error">{{ error }}</div>
+        {% endif %}
+        {% if description %}
+            <div class="result">
+                <h2>Video Description</h2>
+                <p>{{ description }}</p>
+            </div>
+        {% endif %}
+        {% if frame_urls %}
+            <div class="frames">
+                <h3>Extracted Frames (in sequence)</h3>
+                <div class="frame-list">
+                    {% for url in frame_urls %}
+                        <img src="{{ url }}" alt="Frame {{ loop.index }}" class="frame-thumb">
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
