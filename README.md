@@ -42,8 +42,9 @@ Visus is a modern Flask web application that allows users to upload a video, ext
    ```
 
 3. **Set up your OpenRouter API key:**
-   - Edit `video_analysis.py` and replace the placeholder API key with your own.
-   - (Recommended) Use an environment variable for security.
+   - **IMPORTANT:** You must add your own OpenRouter API key in `video_analysis.py`.
+   - Remove the provided example API key from the file for security.
+   - (Recommended) Use an environment variable for your API key instead of hardcoding it.
 
 4. **Run the app:**
    ```bash
