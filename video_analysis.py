@@ -152,7 +152,7 @@ from openai import OpenAI
 import os
 
 # --- Configuration ---
-OPENROUTER_API_KEY = "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"  # Replace with your OpenRouter API key
+OPENROUTER_API_KEY = "<YOUR_API_KEY>"  # Replace with your OpenRouter API key
 YOUR_SITE_URL = "<YOUR_SITE_URL>"  # Optional: Site URL for rankings on openrouter.ai.
 YOUR_SITE_NAME = "<YOUR_SITE_NAME>" # Optional: Site title for rankings on openrouter.ai.
 
